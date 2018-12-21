@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC8CD7BB-C3D8-43ED-91CA-3332378CC43E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>mxGraph</RootNamespace>
+    <AssemblyName>mxGraph</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.0.0.999, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.0.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base64.cs" />
+    <Compile Include="BaseNCodec.cs" />
+    <Compile Include="BinaryDecoder.cs" />
+    <Compile Include="BinaryEncoder.cs" />
+    <Compile Include="ChangeListenerMap.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="DateTimeHelperClass.cs" />
+    <Compile Include="Decoder.cs" />
+    <Compile Include="Dimension.cs" />
+    <Compile Include="Dimension2D.cs" />
+    <Compile Include="Encoder.cs" />
+    <Compile Include="EventListener.cs" />
+    <Compile Include="EventListenerProxy.cs" />
+    <Compile Include="EventObject.cs" />
+    <Compile Include="GlobalRandom.cs" />
+    <Compile Include="HashMapHelperClass.cs" />
+    <Compile Include="LinkedHashMap.cs" />
+    <Compile Include="ObjectStreamField.cs" />
+    <Compile Include="PointHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyChangeEvent.cs" />
+    <Compile Include="PropertyChangeListener.cs" />
+    <Compile Include="PropertyChangeListenerProxy.cs" />
+    <Compile Include="PropertyChangeSupport.cs" />
+    <Compile Include="RectangularArrays.cs" />
+    <Compile Include="canvas\mxBasicCanvas.cs" />
+    <Compile Include="canvas\mxHtmlCanvas.cs" />
+    <Compile Include="canvas\mxICanvas.cs" />
+    <Compile Include="canvas\mxSvgCanvas.cs" />
+    <Compile Include="canvas\mxVmlCanvas.cs" />
+    <Compile Include="io\gliffy\importer\ArrowMapping.cs" />
+    <Compile Include="io\gliffy\importer\DashStyleMapping.cs" />
+    <Compile Include="io\gliffy\importer\LineMapping.cs" />
+    <Compile Include="io\gliffy\model\Constraint.cs" />
+    <Compile Include="io\gliffy\model\Constraints.cs" />
+    <Compile Include="io\gliffy\model\Diagram.cs" />
+    <Compile Include="io\gliffy\model\EmbeddedResources.cs" />
+    <Compile Include="io\gliffy\model\GliffyObject.cs" />
+    <Compile Include="io\gliffy\model\Graphic.cs" />
+    <Compile Include="io\gliffy\model\LinkMap.cs" />
+    <Compile Include="io\gliffy\model\Metadata.cs" />
+    <Compile Include="io\gliffy\model\Stage.cs" />
+    <Compile Include="io\graphml\mxGraphMlConstants.cs" />
+    <Compile Include="io\graphml\mxGraphMlData.cs" />
+    <Compile Include="io\graphml\mxGraphMlEdge.cs" />
+    <Compile Include="io\graphml\mxGraphMlGraph.cs" />
+    <Compile Include="io\graphml\mxGraphMlKey.cs" />
+    <Compile Include="io\graphml\mxGraphMlKeyManager.cs" />
+    <Compile Include="io\graphml\mxGraphMlNode.cs" />
+    <Compile Include="io\graphml\mxGraphMlPort.cs" />
+    <Compile Include="io\graphml\mxGraphMlShapeEdge.cs" />
+    <Compile Include="io\graphml\mxGraphMlShapeNode.cs" />
+    <Compile Include="io\graphml\mxGraphMlUtils.cs" />
+    <Compile Include="io\mxCellCodec.cs" />
+    <Compile Include="io\mxChildChangeCodec.cs" />
+    <Compile Include="io\mxCodec.cs" />
+    <Compile Include="io\mxCodecRegistry.cs" />
+    <Compile Include="io\mxGenericChangeCodec.cs" />
+    <Compile Include="io\mxGraphMlCodec.cs" />
+    <Compile Include="io\mxModelCodec.cs" />
+    <Compile Include="io\mxObjectCodec.cs" />
+    <Compile Include="io\mxRootChangeCodec.cs" />
+    <Compile Include="io\mxStylesheetCodec.cs" />
+    <Compile Include="io\mxTerminalChangeCodec.cs" />
+    <Compile Include="io\mxVsdxCodec.cs" />
+    <Compile Include="io\mxVssxCodec.cs" />
+    <Compile Include="io\vsdx\export\ModelExtAttrib.cs" />
+    <Compile Include="io\vsdx\geometry\ArcTo.cs" />
+    <Compile Include="io\vsdx\geometry\DelRow.cs" />
+    <Compile Include="io\vsdx\geometry\Ellipse.cs" />
+    <Compile Include="io\vsdx\geometry\EllipticalArcTo.cs" />
+    <Compile Include="io\vsdx\geometry\InfiniteLine.cs" />
+    <Compile Include="io\vsdx\geometry\LineTo.cs" />
+    <Compile Include="io\vsdx\geometry\MoveTo.cs" />
+    <Compile Include="io\vsdx\geometry\NURBSTo.cs" />
+    <Compile Include="io\vsdx\geometry\PolylineTo.cs" />
+    <Compile Include="io\vsdx\geometry\RelCubBezTo.cs" />
+    <Compile Include="io\vsdx\geometry\RelEllipticalArcTo.cs" />
+    <Compile Include="io\vsdx\geometry\RelLineTo.cs" />
+    <Compile Include="io\vsdx\geometry\RelMoveTo.cs" />
+    <Compile Include="io\vsdx\geometry\RelQuadBezTo.cs" />
+    <Compile Include="io\vsdx\geometry\Row.cs" />
+    <Compile Include="io\vsdx\geometry\RowFactory.cs" />
+    <Compile Include="io\vsdx\geometry\SplineKnot.cs" />
+    <Compile Include="io\vsdx\geometry\SplineStart.cs" />
+    <Compile Include="io\vsdx\mxPathDebug.cs" />
+    <Compile Include="io\vsdx\mxPropertiesManager.cs" />
+    <Compile Include="io\vsdx\mxVsdxConnect.cs" />
+    <Compile Include="io\vsdx\mxVsdxConstants.cs" />
+    <Compile Include="io\vsdx\mxVsdxGeometry.cs" />
+    <Compile Include="io\vsdx\mxVsdxGeometryList.cs" />
+    <Compile Include="io\vsdx\mxVsdxMaster.cs" />
+    <Compile Include="io\vsdx\mxVsdxModel.cs" />
+    <Compile Include="io\vsdx\mxVsdxPage.cs" />
+    <Compile Include="io\vsdx\mxVsdxTheme.cs" />
+    <Compile Include="io\vsdx\mxVsdxUtils.cs" />
+    <Compile Include="io\vsdx\Paragraph.cs" />
+    <Compile Include="io\vsdx\Section.cs" />
+    <Compile Include="io\vsdx\Shape.cs" />
+    <Compile Include="io\vsdx\ShapePageId.cs" />
+    <Compile Include="io\vsdx\Style.cs" />
+    <Compile Include="io\vsdx\theme\Color.cs" />
+    <Compile Include="io\vsdx\theme\FillStyle.cs" />
+    <Compile Include="io\vsdx\theme\FillStyleFactory.cs" />
+    <Compile Include="io\vsdx\theme\GradFill.cs" />
+    <Compile Include="io\vsdx\theme\HslClr.cs" />
+    <Compile Include="io\vsdx\theme\HSLColor.cs" />
+    <Compile Include="io\vsdx\theme\HSVColor.cs" />
+    <Compile Include="io\vsdx\theme\LineStyle.cs" />
+    <Compile Include="io\vsdx\theme\LineStyleExt.cs" />
+    <Compile Include="io\vsdx\theme\NoFillStyle.cs" />
+    <Compile Include="io\vsdx\theme\OoxmlColor.cs" />
+    <Compile Include="io\vsdx\theme\OoxmlColorFactory.cs" />
+    <Compile Include="io\vsdx\theme\PrstClr.cs" />
+    <Compile Include="io\vsdx\theme\QuickStyleVals.cs" />
+    <Compile Include="io\vsdx\theme\SchemeClr.cs" />
+    <Compile Include="io\vsdx\theme\ScrgbClr.cs" />
+    <Compile Include="io\vsdx\theme\SolidFillStyle.cs" />
+    <Compile Include="io\vsdx\theme\SrgbClr.cs" />
+    <Compile Include="io\vsdx\theme\SysClr.cs" />
+    <Compile Include="io\vsdx\VsdxShape.cs" />
+    <Compile Include="layout\hierarchical\model\mxGraphAbstractHierarchyCell.cs" />
+    <Compile Include="layout\hierarchical\model\mxGraphHierarchyEdge.cs" />
+    <Compile Include="layout\hierarchical\model\mxGraphHierarchyModel.cs" />
+    <Compile Include="layout\hierarchical\model\mxGraphHierarchyNode.cs" />
+    <Compile Include="layout\hierarchical\model\mxGraphHierarchyRank.cs" />
+    <Compile Include="layout\hierarchical\mxHierarchicalLayout.cs" />
+    <Compile Include="layout\hierarchical\stage\mxCoordinateAssignment.cs" />
+    <Compile Include="layout\hierarchical\stage\mxHierarchicalLayoutStage.cs" />
+    <Compile Include="layout\hierarchical\stage\mxMedianHybridCrossingReduction.cs" />
+    <Compile Include="layout\hierarchical\stage\mxMinimumCycleRemover.cs" />
+    <Compile Include="layout\mxCircleLayout.cs" />
+    <Compile Include="layout\mxCompactTreeLayout.cs" />
+    <Compile Include="layout\mxEdgeLabelLayout.cs" />
+    <Compile Include="layout\mxFastOrganicLayout.cs" />
+    <Compile Include="layout\mxGraphLayout.cs" />
+    <Compile Include="layout\mxIGraphLayout.cs" />
+    <Compile Include="layout\mxOrganicLayout.cs" />
+    <Compile Include="layout\mxParallelEdgeLayout.cs" />
+    <Compile Include="layout\mxPartitionLayout.cs" />
+    <Compile Include="layout\mxStackLayout.cs" />
+    <Compile Include="model\mxCell.cs" />
+    <Compile Include="model\mxCellPath.cs" />
+    <Compile Include="model\mxGeometry.cs" />
+    <Compile Include="model\mxGraphModel.cs" />
+    <Compile Include="model\mxICell.cs" />
+    <Compile Include="model\mxIGraphModel.cs" />
+    <Compile Include="online\AppShortcutServlet.cs" />
+    <Compile Include="online\Constants.cs" />
+    <Compile Include="online\EmbedServlet2.cs" />
+    <Compile Include="online\GitHubServlet.cs" />
+    <Compile Include="online\GoogleGadgetServlet.cs" />
+    <Compile Include="online\ImgurRedirectServlet.cs" />
+    <Compile Include="online\LogServlet.cs" />
+    <Compile Include="online\mxBase64.cs" />
+    <Compile Include="online\OpenServlet.cs" />
+    <Compile Include="online\ProxyServlet.cs" />
+    <Compile Include="online\SaveServlet.cs" />
+    <Compile Include="online\Utils.cs" />
+    <Compile Include="util\mxBase64.cs" />
+    <Compile Include="util\mxConstants.cs" />
+    <Compile Include="util\mxCurve.cs" />
+    <Compile Include="util\mxDomUtils.cs" />
+    <Compile Include="util\mxEvent.cs" />
+    <Compile Include="util\mxEventObject.cs" />
+    <Compile Include="util\mxEventSource.cs" />
+    <Compile Include="util\mxImage.cs" />
+    <Compile Include="util\mxLightweightLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="util\mxLine.cs" />
+    <Compile Include="util\mxPoint.cs" />
+    <Compile Include="util\mxRectangle.cs" />
+    <Compile Include="util\mxResources.cs" />
+    <Compile Include="util\mxSpline.cs" />
+    <Compile Include="util\mxSpline1D.cs" />
+    <Compile Include="util\mxUndoableEdit.cs" />
+    <Compile Include="util\mxUndoManager.cs" />
+    <Compile Include="util\mxUtils.cs" />
+    <Compile Include="util\mxXmlUtils.cs" />
+    <Compile Include="view\mxCellState.cs" />
+    <Compile Include="view\mxConnectionConstraint.cs" />
+    <Compile Include="view\mxEdgeStyle.cs" />
+    <Compile Include="view\mxGraph.cs" />
+    <Compile Include="view\mxGraphHeadless.cs" />
+    <Compile Include="view\mxGraphSelectionModel.cs" />
+    <Compile Include="view\mxGraphView.cs" />
+    <Compile Include="view\mxLayoutManager.cs" />
+    <Compile Include="view\mxMultiplicity.cs" />
+    <Compile Include="view\mxPerimeter.cs" />
+    <Compile Include="view\mxSpaceManager.cs" />
+    <Compile Include="view\mxStyleRegistry.cs" />
+    <Compile Include="view\mxStylesheet.cs" />
+    <Compile Include="view\mxSwimlaneManager.cs" />
+    <Compile Include="view\mxTemporaryCellStates.cs" />
+    <Compile Include="vsdxutils\vsdxBatchConvert.cs" />
+    <Compile Include="StringHelperClass.cs" />
+    <Compile Include="StringTokenizer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="io\vsdx\resources\edgeNameU.properties" />
+    <None Include="io\vsdx\resources\export\visio\masters\_rels\masters.xml.rels" />
+    <None Include="io\vsdx\resources\export\visio\pages\_rels\page1.xml.rels" />
+    <None Include="io\vsdx\resources\export\visio\_rels\document.xml.rels" />
+    <None Include="io\vsdx\resources\export\_rels\.rels" />
+    <None Include="io\vsdx\resources\nameU.properties" />
+    <None Include="io\vsdx\resources\nameU.tmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="io\vsdx\resources\export\docProps\app.xml" />
+    <Content Include="io\vsdx\resources\export\docProps\core.xml" />
+    <Content Include="io\vsdx\resources\export\docProps\custom.xml" />
+    <Content Include="io\vsdx\resources\export\visio\document.xml" />
+    <Content Include="io\vsdx\resources\export\visio\masters\masters.xml" />
+    <Content Include="io\vsdx\resources\export\visio\windows.xml" />
+    <Content Include="io\vsdx\resources\export\[Content_Types].xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
