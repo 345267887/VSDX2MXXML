@@ -9,10 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mxGraph", "mxGraph\mxGraph.csproj", "{EC8CD7BB-C3D8-43ED-91CA-3332378CC43E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{9E9DB472-C410-46E2-8B3E-186DF962A6C3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jdk7Net", "Jdk7Net\Jdk7Net.csproj", "{62A61863-92CA-40E3-B449-7082AC3C5FD6}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,14 +27,6 @@ Global
 		{EC8CD7BB-C3D8-43ED-91CA-3332378CC43E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC8CD7BB-C3D8-43ED-91CA-3332378CC43E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC8CD7BB-C3D8-43ED-91CA-3332378CC43E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9E9DB472-C410-46E2-8B3E-186DF962A6C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E9DB472-C410-46E2-8B3E-186DF962A6C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E9DB472-C410-46E2-8B3E-186DF962A6C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E9DB472-C410-46E2-8B3E-186DF962A6C3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{62A61863-92CA-40E3-B449-7082AC3C5FD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{62A61863-92CA-40E3-B449-7082AC3C5FD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{62A61863-92CA-40E3-B449-7082AC3C5FD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{62A61863-92CA-40E3-B449-7082AC3C5FD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
